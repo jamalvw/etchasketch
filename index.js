@@ -2,6 +2,11 @@ const DISPLAY_SIZE = 400;
 
 function createGrid(display, squaresPerSide)
 {
+	if (isNaN(squaresPerSide))
+		return alert(`Invalid number: ${squaresPerSide}`);
+	if (squaresPerSide < 2 || squaresPerSide > 100)
+		return alert(`Number must be within 2 and 100.`);
+
 	while (display.firstChild) display.removeChild(display.firstChild);
 
 	const squareSize = DISPLAY_SIZE / squaresPerSide;
@@ -28,6 +33,6 @@ window.onload = function()
 	newGrid.onclick = () =>
 	{
 		const dimensions = prompt('How many squares per side?');
-		createGrid(display, dimensions);
+		if (dimensions)	createGrid(display, dimensions);
 	}
 };
