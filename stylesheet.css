@@ -1,0 +1,21 @@
+#container
+{
+	margin: auto;
+	background-color: lightgray;
+	padding: 30px;
+	display: inline-block
+}
+
+#display
+{
+	outline: 1px solid black;
+	margin: 10px 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.square
+{
+	outline: 1px solid lightgray;
+	background-color: white;
+}
